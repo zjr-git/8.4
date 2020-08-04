@@ -878,6 +878,238 @@
         </div>
     </footer>
     <!-- 底部结束 -->
+
+    <style>
+        .fixed_div2 {
+            position: fixed;
+            left: 0;
+            bottom: 0px;
+            width: 240px;
+            height: 400px;
+            overflow: hidden;
+            background: #ededed !important;
+            border-radius: 2%;
+            
+        }
+
+        .one {
+            width: 240px;
+            height: 35px;
+            background: #d5d5d5;
+        }
+
+        .one span {
+            float: left;
+            font-size: 14px;
+            color: #fff;
+            margin-left: 12px;
+            line-height: 35px;
+        }
+
+        .close {
+            display: inline-block;
+            float: right;
+            height: 30px;
+            width: 34px;
+            margin-top: 2px;
+            cursor: pointer;
+            background: transparent url(./imgs/nodeMin.png) no-repeat;
+        }
+
+        .two {
+            width: 240px;
+            height: 60px;
+            zoom: 1;
+            padding: 12px 0;
+            border-bottom: 1px solid #d5d5d5;
+
+        }
+
+        .two p {
+            font-size: 14px;
+            background-color: transparent;
+            color: #666;
+            line-height: 18px;
+            margin: 0 8px 0 9px;
+        }
+
+        .two span {
+            background-color: transparent;
+            color: #999;
+            line-height: 18px;
+            margin: 0 8px 0 9px;
+        }
+
+        .three {
+            width: 240px;
+            height: 81px;
+
+        }
+
+        .three textarea {
+            height: 79px;
+            width: 212px;
+            margin: 12px auto 7px;
+            padding: 0 4px;
+            resize: none;
+            overflow: hidden;
+            background-color: #fff;
+            text-align: left;
+            border-radius: 0;
+            left: 0px;
+            position: relative;
+            text-decoration: none;
+            display: block;
+            font-size: 12px;
+            font-family: inherit;
+
+        }
+
+        .four {
+            width: 240px;
+            height: 30px;
+        }
+
+        .four div {
+            width: 212px;
+            height: 30px;
+            z-index: 4;
+            line-height: 30px;
+            margin: 7px auto 0;
+            border: 1px solid #d5d5d5;
+            position: relative;
+            background-color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .name img {
+            width: 15px;
+            height: 13px;
+            display: inline-block;
+            text-align: center;
+            background-color: #fff;
+            vertical-align: top;
+            border-right: 1px solid #fff;
+            position: relative;
+            left: 8px;
+            bottom: -7px;
+        }
+        .name input{
+            margin: 0;
+            width: 140px;
+            height: 25px;
+            line-height: 30px;
+            overflow: hidden;
+            border: none;
+            display: inline-block;
+            position: relative;
+            left: 15px;
+            bottom: 1px;
+        }
+        .five{
+            height: 53px;
+            width: 202px;
+            margin: 12px auto 0 10px;
+            padding-bottom: 18px;
+            position: relative;
+            left: 5px;
+        }
+        .five div{
+            height: 35px;
+            width: 90px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 2px;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            background-color: #00aef3;
+
+        }
+    </style>
+    <div class="fixed_div2">
+        <div class="one">
+            <span>请您留言</span>
+            <div class="close"></div>
+        </div>
+
+        <div class="two">
+            <p>富思特</p>
+            <span>400-666-5100</span>
+        </div>
+
+        <div class="three">
+            <textarea id="nb-nodeboard-set-content-js" name="content" data-ph="请在此输入留言内容，我们会尽快与您联系。（必填）"
+                placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" class="nb-nodeboard-set-content nb-nodeboard-param"></textarea>
+        </div>
+
+        <div class="four">
+            <div class="name">
+                <img src="./imgs/user.png" alt="" style="background: no-repeat 9px center">
+
+                <input id="nb_nodeboard_set_name" data-write="0" name="visitorName" maxlength="30" class="nb-nodeboard-input nb-nodeboard-param" type="text" data-ph="姓名" placeholder="姓名">
+            </div>
+        </div>
+
+        <div class="four">
+            <div class="name">
+                <img src="./imgs/nodephone.png" alt="" style="background: no-repeat 9px center">
+
+                <input id="nb_nodeboard_set_name" data-write="0" name="visitorName" maxlength="30" class="nb-nodeboard-input nb-nodeboard-param" type="text" data-ph="电话(必填)" placeholder="电话(必填)">
+            </div>
+        </div>
+        <div class="four">
+            <div class="name">
+                <img src="./imgs/nodemail.png" alt="" style="background: no-repeat 9px center">
+
+                <input id="nb_nodeboard_set_name" data-write="0" name="visitorName" maxlength="30" class="nb-nodeboard-input nb-nodeboard-param" type="text" data-ph="邮箱" placeholder="邮箱">
+            </div>
+        </div>
+        <div class="four">
+            <div class="name">
+                <img src="./imgs/nodelocation.png" alt="" style="background: no-repeat 9px center">
+
+                <input id="nb_nodeboard_set_name" data-write="0" name="visitorName" maxlength="30" class="nb-nodeboard-input nb-nodeboard-param" type="text" data-ph="地址" placeholder="地址">
+            </div>
+        </div>
+
+        <div class="five">
+            <div class="center">发送</div>
+        </div>
+
+    </div>
+    <script>
+        var close=document.querySelector(".close");
+        var fixed=document.querySelector(".fixed_div2")
+        close.onclick=function(){
+            
+            close.style=null;
+            this.innerHTML=""
+            
+            animate(fixed,{
+               width:240,
+               height:40,
+               top:document.documentElement.clientHeight-70,  
+            },100)
+
+            close.onclick=function(){
+                close.style=null;
+            this.innerHTML=""
+            
+            animate(fixed,{
+               width:240,
+               height:400,
+               top:document.documentElement.clientHeight-400 
+            },100)
+            }
+            
+        }  
+    </script>
+                  
+     </script>
+   
+
 </body>
 
 </html>
